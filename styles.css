@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 44px 0 144px 76px;
+}
+
+.link-reader {
+  color: #989d9c;
+  text-decoration: none;
+  margin: 0 23px 0 0;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  cursor: pointer;
+}
+
+.button-login {
+  background-color: #665ae1;
+  border: none;
+  color: #fff;
+  width: 130px;
+  height: 41px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  border-radius: 20.5px;
+  cursor: pointer;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.image-pet {
+  width: 568px;
+  height: 500px;
+  display: inline-block;
+  margin: 0 0 0 125px;
+}
+
+section {
+  display: inline-block;
+  margin: 0 0 0 86px;
+}
+
+section h1 {
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 122px;
+  color: #515151;
+}
+
+section h3 {
+  font-size: 58px;
+  line-height: 71px;
+  font-weight: 500;
+  color: #515151;
+}
+
+section p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #848484;
+  width: 515px;
+  margin: 32px 76px 65px 0;
+}
+
+.button-explore {
+  background-color: #adff00;
+  border: none;
+  border-radius: 50px;
+  width: 239px;
+  height: 64px;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media (max-width: 1299px) {
+  main {
+    display: block;
+  }
+
+  section h1,
+  h3,
+  p,
+  .button-explore {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 12px 0 7px 80px;
+  }
+
+  section h3 {
+    margin-left: 85px;
+  }
+
+  section p {
+    margin-left: 160px;
+    width: 350px;
+  }
+
+  .button-explore {
+    align-items: center;
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 915px) {
+  header {
+    display: none;
+  }
+
+   section p {
+   display: none;
+  }
+
+  main {
+    display: block;
+    margin-top: 10%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 845px) {
+  /* ocupa a altura toda e centraliza horizontalmente o container */
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;    /* centraliza o main verticalmente quando couber */
+  }
+
+  main {
+    width: 100%;
+    max-width: 560px;           /* limite para não estourar no mobile */
+    min-height: 100vh;          /* garante espaço para centralização se precisar */
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;     /* imagem em cima, textos embaixo */
+    align-items: center;        /* centraliza na horizontal */
+    justify-content: flex-start;/* começa do topo */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .image-pet {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin: 150px auto 10px;
+  }
+
+  /* faz a pilha h1, h3, botão centralizada */
+  section {
+    margin: 0;                  /* zera margens herdadas */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* centraliza h1/h3/botão */
+    gap: 10px;
+    text-align: center;
+  }
+
+  section h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  section h3 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  section p {
+    display: none; /* mantém oculto no mobile */
+  }
+
+  /* o segredo: bloqueia margens antigas e centraliza de vez */
+  .button-explore {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
+    margin: 8px auto 0;        /* centraliza no eixo X */
+  }
+}
